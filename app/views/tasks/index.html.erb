@@ -3,11 +3,16 @@
 <h1>Tasks</h1>
 
 <div id="tasks">
+  <% if !@user_id %>
+    <h3>No tasks were found</h3>
+  <% end %>
   <% @tasks.each do |task| %>
-    <%= render task %>
+    <% if @user_id == task.user_id %>
+      <%= render task %>
     <p>
       <%= link_to "Show this task", task %>
     </p>
+    <% end %>
   <% end %>
 </div>
 
