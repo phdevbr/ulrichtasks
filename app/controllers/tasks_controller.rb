@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     @user_id = cookies[:user_id]
+    redirect_to login_path, notice: 'You are not logged in.' unless @user_id
   end
 
   # GET /tasks/1 or /tasks/1.json
