@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="row">
   <head>
     <title>Ulrichtasks</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,11 +8,13 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'checked' %>
   </head>
 
-  <body>
+  <body class="mx-2">
     <p style="color: red"><%= alert %></p>
     <p style="color: green"><%= notice %></p>
     <%= yield %>
   </body>
+  <!-- <footer class="div-footer"><div class="ulrich-footer">Made by Ulrich. ulrich#5428</div></footer> -->
 </html>
